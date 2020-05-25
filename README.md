@@ -16,7 +16,7 @@ Kinesis Firehose monitoring page screenshot is below.
 
 ![Kinesis Firehose monitoring page screenshot](1.png)
 
-For the analysis, hourly high stock price is extracted for the companies. The file is [here](results.csv).
+For the analysis, hourly high stock price is extracted for the companies. The file is [here](results.csv). Analysis using this hourly high stock price dataset is [here](Analysis.ipynb).
 
 
 
