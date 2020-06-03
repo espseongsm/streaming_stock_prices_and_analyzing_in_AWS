@@ -1,6 +1,13 @@
-# Streaming Yahoo Finance Stock data in AWS
+# Streaming and Analyzing Yahoo Finance Stock data in AWS
 
-In this project, several AWS services are inplemented such as AWS S3, Kinesis, Athen, Glue, and Lambda function.
+- Language: Python, Jupyter notebook, SQL, Docker
+  - Libraries: pandas, yfinance, boto3, os, subprocess, sys, json, yfinance
+- Service: AWS S3, Kinesis, Athena, Glue, and Lambda function
+- [Code for collecting and transforming](data_collector.py)
+  - this code is implemented in Lambda function with [Deployment Package](lambda.zip) using Docker.
+- [Code for querying](query.sql)
+
+In this project, several AWS services(S3, Kinesis, Lambda function) are implemented to stream Yahoo Finance stock price data in json format. In addition, Glue and Athena is used to query the datset using SQL language.
 
 The purpose is to stream yahoo finance stock data of 10 companies to AWS S3 and query in AWS Athena. Lambda function in AWS has a major role in collecting data from Yahoo Finance and storing it to S3.
 
@@ -17,7 +24,3 @@ Kinesis Firehose monitoring page screenshot is below.
 ![Kinesis Firehose monitoring page screenshot](1.png)
 
 For the analysis, hourly high stock price is extracted for the companies. The file is [here](results.csv). Analysis using this hourly high stock price dataset is [here](Analysis.ipynb).
-
-
-
-
